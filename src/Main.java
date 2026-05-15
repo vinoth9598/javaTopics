@@ -1,80 +1,36 @@
-import java.util.ArrayList;
 
 public class Main {
-    public static void main(){
-        String name = "vinoth" ;
-        System.out.println(name);
+    static void myMethod(){
+        System.out.println("I just got executed");
+    }
+    public static void main(String[] args){
+        myMethod();
+        myMethod();
+        myMethod();
 
-        int myNum = 15 ;
-        myNum = 35 ;
+        //parameter and arguments
+        myMethods("Liam");
+        myMethods("Jenny");
 
-        float myFloatNum = 5.99f ;
-        char myLetter = 'D' ;
-        boolean myBool = true ;
-        System.out.println(myFloatNum);
-        System.out.println(myLetter);
-        System.out.println(myBool);
+        //parameters
+        myMethods1("vinoth", 21);
 
-        //contatination
+        checkAge(20);
+    }
 
-        String names = "vinoth kumar";
-        System.out.println("Hello " + name);
+    static void myMethods(String name ){
+        System.out.println(name + " Refsnes");
+    }
 
-        String firstName = "vinoth " ;
-        String lastName = "Doe" ;
-        String fullname = firstName + lastName ;
-        System.out.println(fullname);
+    static void myMethods1(String name, int age){
+        System.out.println("Name :" + name + " Age :" + age);
+    }
 
-        //Declare multiple values
-        int x = 5 ;
-        int y = 6 ;
-        int z = 50 ;
-        System.out.println(x + y + z);
-
-        final int myNumber = 15 ;
-//        myNumber = 30 ;
-        System.out.println(myNumber);
-
-        int value = 20 ;
-        String myName = "vinoth";
-        float myNums = 5.66f ;
-        boolean myStatement = false ;
-        char n = 'G' ;
-
-        byte ambulance = 108 ;
-        short value2 = 123 ;
-        int yy = 1000 ;
-        long cont = 1234567 ;
-        float value3 = 100.54f ;
-        double value4 = 456.543 ;
-        boolean values = true ;
-        char counter = 'F' ;
-
-//        int myNumm = 5 ;
-//        myNumm = "vinoth" ;
-//
-//        String myText = "Hi";
-//        myText = 1234 ;
-
-// Non primitive Data Types
-        var names2 = 5 ;
-        System.out.println(x);
-    //without var
-        ArrayList<String> cars = new ArrayList<String>();
-    //with var
-        var carrs = new ArrayList<String>();
-
-//Widening Casting
-        int myInt = 9 ;
-        double myDouble = myInt ;
-
-        System.out.println(myInt);
-        System.out.println(myDouble);
-// Narrowing Casting
-        double myDouble1 = 9.78d ;
-        int myIntt = (int) myDouble1 ;
-        System.out.println(myDouble1);
-        System.out.println(myIntt);
-
+    static void checkAge(int age) {
+        if(age < 18){
+            System.out.println("Access denied - You are not old enough");
+        }else {
+            System.out.println("Access granted - you are old enough!");
+        }
     }
 }
